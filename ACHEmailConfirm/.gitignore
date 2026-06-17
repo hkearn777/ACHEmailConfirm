@@ -1,0 +1,7 @@
+## Ignore secrets and user-specific files
+*.config.user
+App.config.user
+
+## Ignore build output
+bin/
+obj/

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.0" />
+	</ItemGroup>
+
+	<!-- Copy App.config.user if it exists (for local development) -->
+	<Target Name="CopyUserConfig" BeforeTargets="Build">
+		<Copy SourceFiles="App.config.user"
+			  DestinationFiles="$(OutDir)\$(AssemblyName).dll.config.user"
+			  Condition="Exists('App.config.user')" />
+	</Target>
+
+</Project>
