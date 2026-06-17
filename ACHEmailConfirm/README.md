@@ -4,7 +4,7 @@ Windows Forms application to send ACH confirmation emails and archive ACH files.
 
 ## Setup Instructions
 
-### 1. Install NuGet Package
+### 1. Install NuGet Package and .Net version 9
 
 
 ### 2. Configure Email Password
@@ -15,7 +15,7 @@ Create a file named `App.config.user` in the project root:
 
 ### 3. Google App Password
 
-Generate a Google App Password for `CantaWells@FBCMandeville.org`:
+Generate a Google App Password for `yourEmail@yourDomain.com`:
 1. Go to: https://myaccount.google.com/apppasswords
 2. Create a new app password named "ACH Email Tool"
 3. Copy the 16-character password
